@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method</title>
+</head>
+<body>
+    <!-- 
+    Super Method 
+    - Selain digunakan untuk memanggil constructor milih parent class, kata kunci super juga bisa digunakan untuk mengakses method parent class
+    - Caranya bisa menggunakan super titik nama function nya
+    - Dengan kata lain, super sebenarnya adalah reference ke parent prototype, mirip seperti __proto__
+     -->
+    <script>
+        class Shape {
+
+             pain() {
+                console.info('Paint Shape')
+            }
+
+        }
+
+        class Circle extends Shape {
+
+            pain() {
+                super.pain() // memanggil paint() method parent class
+                console.info('Pain Circle')
+            }
+
+        }
+
+        const lingkaran = new Circle()
+        lingkaran.pain()
+    </script>
+</body>
+</html>

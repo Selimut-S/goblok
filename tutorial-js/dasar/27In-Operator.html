@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Operator</title>
+</head>
+<body>
+<!-- In Operator
+    In Operator adalah operator yang bisa dilakukan untuk mengecek apakah sebuah property ada di dalam object atau tidak.
+    Jika property tersebut adal didalam object, maka hasilnya true, sedangkan jika tidak, maka hasilnya false.
+    Tidak hanya di object, In juga bisa digunakna untuk mengecek index di Array.
+    
+    Peringatan:
+    In operator hanya akan mengecek apakah sebuah property atau index ada atau tidak.
+    Jadi walaupun nilai property atau index nya null, maka tetap akan dianggap ada.
+-->
+<script>
+    const person = {
+        firstName : 'Fyrmuen',
+        lastName : 'Hermansyah'
+    }
+    const result = 'firstName' in person //true
+    document.writeln(`<p>${result}</p>`)
+
+    const name = {
+        udin : '34',
+        cahya : '21',
+        asep : '22'
+    }
+    if ('boneng' in name){ //false
+        alert('Property tersebut ditemukan')
+    } else {
+        alert('Property tidak ditemukan')
+    }
+// null dan undefined
+    const nomor = [1, null, 3, 4, null]
+    const cek = 1 in nomor //true
+    document.writeln(`<p>${cek}</p>`)
+
+    const ngaran = {
+        ngaranHarep : 'udin',
+        ngaranTengah : undefined,
+        ngaranTuntung : 'codet'
+    }
+    if ('ngaranTengah' in ngaran){
+        document.writeln(`<p>Hello ${ngaran.ngaranTengah}</p>`)
+    } else {
+        document.writeln(`<p>Hello student</p>`)
+    }
+</script> 
+</body>
+</html>

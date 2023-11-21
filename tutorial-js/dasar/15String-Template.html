@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <!-- Sting Tamplate
+        Kita sudah tahu bahwa untuk menambahkan string dengan data lain, kita bisa menggunakan operator + (plus).
+        Namun pada kasus tertentu, penggunaan operator + (plus) sangat menyulitkan, apalagi jika dalam jumlah bahyak.
+        JavaScript memilki fitur yang namanya String Tamplate, dimana kita bisa mensubtitusi data dari luar String ke dalam String,
+        seperti mengambil data variable, atau bahkan melakukan operasi matematika.
+        Untuk menggunakan String Templat, cara pembuatan stringnya harus menggunakan `(backtick),
+        bukan '(petik satu) atau "(petik dua)
+         Multiline String
+        String template juga bisa digunakan untuk membuat string multi line.
+        Kita cukup tambahkan enter di text nya.
+     -->
+    
+<script>
+    //mengambil variable
+    const name = 'Firman Hermansyah'
+    const firstName = 'Firman'
+    const lastName = 'Hermansyah'
+    const templat = `Name : ${firstName} ${lastName}`
+    console.info(templat)
+    //expression di string template
+    const nilai = 90
+    const templat2 = `Name : ${name}, Ganteng ${nilai > 75}`
+    console.info(templat2)
+    //multiline string
+    const multi = `Nama saya Firman Hermansyah
+    saya sekarang kuliah di AMIK Garut
+    suka nonton ceramah
+jika sedang malas, suka main game`
+    document.writeln('<pre>')
+    document.writeln(multi)
+    document.writeln('</pre>')
+
+    let x = 'firman'
+    let y = ' hermmm'
+    document.writeln(`Nama Lengkap: ${x + y}`)
+</script>
+<!-- tag <pre></pre>
+    HTML element tag <pre> merupakan tag pada HTML yang digunakan untuk mengidentifikasi kumpulan teks yang harus ditampilkan secara utuh apa adanya. 
+    HTML elemen tag ini akan menampilkan kumpulan teks lengkap dengan line break, indentasi dan juga spasi secara utuh.
+-->
+</body>
+</html>

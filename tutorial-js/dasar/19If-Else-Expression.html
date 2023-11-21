@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Expression atau percabangan</title>
+</head>
+<body>
+    <!-- If Expression
+        Dalam JavaScript, if adalah salah satu kata kunci yang digunakan untuk percabangan.
+        Percabangan artinya kita bisa mengekseskusi kode program tertentu ketika suatu kondisi terpenuhi.
+        Hampir disemua bahasa pemrograman mendukung if expression.
+
+        Else Expression
+        Blok if akan dieksekusi ketika kondisi if bernilai true.
+        Kadang kita ingin melakukan eksekusi program tertentu jika kondisi if bernilai false.
+        Hal ini bisa dilakukan menggunakan else expression.
+
+        Else If Expression
+        Kadang dalam If, kita butuh membuat beberapa kondisi.
+        Kasus seperti ini, di JavaScript kita bisa menggunakan Else If expression.
+     -->
+
+<script>
+    const examValue = 95
+    if (examValue > 80) {
+        document.writeln(`<p>Yes True</p>`)
+    } //jika true maka blok {...} akan dieksekusi, jika nilai nya false maka tidak akan dieksekusi
+    
+    const nilaiUjian = 60
+    if (nilaiUjian > 75) {
+        document.writeln(`<p>Selamat Anda Lulus</p>`)
+    } else {
+        document.writeln(`<p><U>Anda Dinyakatan Tidak Lulus</u></p>`)
+    } //blok else akan dieksekusi jikak kondisi false
+
+    //Else If Expression
+    const ipkSemester5 = 2.0
+    document.writeln(`Jika untuk mendapatkan ipk yang sempurna maka, nilai yang harus di dapat adalah 4.0`)
+    if (ipkSemester5 >= 4.0) {
+        document.writeln(`<p>IPK anda = 4.0 Kerja Yang Bagus</p>`)
+    } else if (ipkSemester5 >= 3.5) {
+        document.writeln(`<p>IPK anda >=3.5 Cukup Bagus</p>`)
+    } else {
+        document.writeln(`<p>IPK anda <=3.0 Anda dalam bahaya</p>`)
+    }
+
+    let x = 100
+    if (x > 90) {
+        document.writeln('Good Job, point A+')
+    } else if (x > 80) {
+        document.writeln('Good Job, point A')
+    } else if (x > 70) {
+        document.writeln('Good Job, point B')
+    } else if (x > 60) {
+        document.writeln('Good Job, point C')
+    } else if (x > 50){
+        document.writeln('You are on the brink, point D')
+    } else {
+        document.writeln('Try Again')
+    }
+</script>
+    
+</body>
+</html>

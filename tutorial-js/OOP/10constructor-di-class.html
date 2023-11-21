@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor di Class</title>
+</head>
+<body>
+    <!-- 
+    Constructor di Class
+    - Karena bentuk constructor function mirip dengan function, jadi kit abisa menambhakna parameter pada constructor function, lantas bagaimana dengan class?
+    - Di class juga kita bisa menambah constructor, dimana dengan menggunakan constructor, kita juga bisa menambahkan parameter saat pertama kali membuat object nya
+    - Untuk membuat konstructor di class, kita bisa menggunakan kata kunci constructor
+     -->
+    <script>
+        class Person {
+            constructor(name){
+                //masukan kode apapun
+                console.info(`Membuat Person ${name}`)
+            }
+        }
+        const eko = new Person ('Eko')
+        console.info(eko)
+        const budi = new Person ('Budi')
+    </script>
+</body>
+</html>

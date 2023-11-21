@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsi dan Truthy</title>
+</head>
+<body>
+    <!-- Falsy 
+        - Falsy atau kadang ditulis falsey , adalah value yang ketika dalam konteks boolean, di anggap false
+        - Ini adalah salah satu fitur unik dari JavaScript, yang berguna, namun kadang juga sering membingungkan
+        - Jadi di JavaScript, kondisi itu tidak hanya bisa boolean, tapi diluar boolean pun bisa, 
+            namun kita harus tahu beberapa data falsy, atau diangggap false
+        Data yang dianggap Falsy    |   Keterangan
+        false                       |   Boolean false
+        0,-0                        |   Number 0 dan -0 dianggap false
+        " ", ' ', ` `               |   Semua string kosong dianggap false
+        null                        |   null dianggap false
+        undifined                   |   undifined dianggap false
+        NaN                         |   not a Number dianggap false
+
+        Truthy
+        - Truthy adalah kebalikan dari falsy, diamana data nya dianggap nilai true 
+        - Sederhana sekali sebenarnya untuk mengetahui sebuah data itu adalah Truthy, 
+            yaitu data yang bukan bernilai falsy
+        Data yang dianggap Truthy   |   Keterangan
+        true                        |   Boolean true
+        -n,...,-2,-1,1,2,...,n      |   Number selain 0 dan -0 dianggap true
+        "xxx", 'yyy', `zzz          |   Semua string yang ada isinya dianggap true
+        [], {}                      |   selain null dianggap true
+        difined                     |   difined dianggap true
+        selain NaN                  |   Selain Not a Number dianggap true
+    -->
+
+    <script>
+        const data = {}  //true
+
+        if(data){
+            document.writeln(`TRUE `)
+        }else{
+            document.writeln(`FALSE`)
+        }
+    </script>
+</body>
+</html>

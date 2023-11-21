@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <!-- For In
+    - For In merupakan perulangan for yang digunakan untuk mengiterasi seluruh data property di object atau index di array.
+    - Walaupun for in bisa digunakan di array, namun tidak direkomendasikan untuk array, 
+    karena biasanya kita jarang sekali butuh di index untuk array, kita bisa menggunakan For Of (yang dibahas setelah ini)
+    -jika didalam object menggunakan "property", jika didalam array menggunakan "index"
+    -->
+    <script>
+        //object
+        const kampus = {
+            IPI: `Institut Pendidikan Indonesia`,
+            UNIGA: `Univertisa Garut`,
+            ITG: `Institut Teknologi Garut`,
+            IPB: `Institut Pertanian Bandung`,
+            UNPAD: `Universitas Padjajaran`,
+        }
+
+        for (const property in kampus) {
+            document.writeln(`<p>Rekomendasi kampus ${property} : ${kampus[property]}`)
+        }
+
+
+        //array
+        let buahBuahan = ['Nangka', 'Apel', 'Stawbery', 'Nanas', 'Melon', 'Duren']
+
+        for (let index in buahBuahan) {
+            document.writeln(`<p>Index ke ${index} nama Buah-buhannya adalah <b>${buahBuahan[index]}</b></p>`)
+        }
+    </script>
+</body>
+</html>

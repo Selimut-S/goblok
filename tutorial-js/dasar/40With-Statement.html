@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <!-- With Statement
+    - With statement merupakan fitur yang digunakan untuk menurunkan sebuah scope data.
+    - Dengan menggunakan with statement, kita bisa mengakses property dalam sebuah data tanpa harus menyebut datanya.
+
+    walaupun with statement ada, namun ini tidak direkomendasikan bahkan js diversi baru with statement ini tidak boleh digunakan
+    -->
+    <h3>AANJIIING   MAU SAMPA KAPAN ini</h3>
+    <script>
+        //kode tanpa with statement
+        const role = {
+            midLane: `Liliya, Odette, Valir`,
+            topLane: `Mellisa, Iritel, Clint`,
+            botLane: `Lapu-lapu, Terizla, Edith`,
+            jungler: `Gussion, Lancelot, Ling`,
+            roamer: 'Franko, Hilda, Estes'
+        }
+
+        console.info(role.midLane)
+        console.info(role.topLane)
+        console.info(role.botLane)
+        console.info(role.jungler)
+        console.info(role.roamer)
+
+        // kode dengan with statement
+        const hewan = {
+            serangga: `nyamuk`,
+            reptil: `ular`,
+            mamalia: `sapi`
+        }
+
+        with (hewan) {
+            console.info(serangga)
+            console.info(reptil)
+            console.info(mamalia)
+        }
+    </script>
+</body>
+</html>

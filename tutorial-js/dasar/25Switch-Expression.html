@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Expression</title>
+</head>
+<body>
+    <!-- Switch Statement
+    Kadang kita hanya butuh menggunakan kondisi sederhana di if statement, seperti hanya menggunakan perbandingan ==
+    Switch adalah tatement percabangan yang sama dengan if, namun lebih sederhana cara pembuatannya.
+    Kondisi di switch statement hanya untuk perbandingan ==
+
+    Terserah kita mau pakai yang mana apakah itu switch atau if, dua-duanya sama saja.
+     -->
+<script>
+    const nilai = 'D'
+//MENGGUNAKAN SWITCH
+    switch (nilai){
+        case 'A':
+            document.writeln('WoW anda lulus dengan baik')
+        break
+        case 'B':
+        case 'C':
+            document.writeln('Anda lulus')
+        break
+        case 'D':
+            document.writeln('Anda tidak lulus')
+        break
+        default:
+            document.writeln('Mungkin anda salah jurusan')
+    }
+//Menggunakan if else
+    if (nilai === 'A'){
+        document.writeln('<p>Wow anda lulus dengan baik</p>')
+    } else if (nilai === 'B' || nilai === 'c'){
+        document.writeln('<p>Anda lulus</p>')
+    } else if (nilai === 'D') {
+        document.writeln('Anda tidak lulus')
+    } else {
+        document.writeln('Mungkin anda salah jurusan')
+    }
+</script>
+</body>
+</html>

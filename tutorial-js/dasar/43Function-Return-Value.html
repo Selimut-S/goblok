@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <!-- Function Return Value
+    - Secara default, function itu tidak menghasilkan value apapun, namun jika kita ingin,
+        kita bisa membuat sebuah function mengembalikan value.
+    - Agar function bisa menghasilkan value, kita bisa menggunakan kata kunci return dibawah function nya.
+    - Dan didalam block function, untuk menghasilkan nilai tersebut, kita harus menggunakan kata kunci return, 
+        lalu diikuti dengan data yang ingin kita hasilkan.
+    - Function hanya bisa mengembalikan satu data, jika kita ingin mengembalikan beberapa data sekaligus,
+        kita bisa menggunakan Array sebagai return value nya.
+
+    Menghentikan Eksekusi dengan Return
+    - Saat kita menggunakan kata kunci return, maka kode setelah return tersebut tidak akan dieksekusi.
+    - Kita bisa menggunakan return untuk menghentikan eksekusi sebuah function.
+    -->
+<script>
+    // membuat function dengan parameter dan return value
+    function sayHallo(firstName, midName, lastName) {
+        const say = `Hallo ${firstName} ${midName} ${lastName}`
+        return say
+    }
+
+    //memanggil function dan menangkap return value nya
+    const jodoh = sayHallo('Gina', 'Firman', 'Hermansyah')
+    document.writeln(`<p>${jodoh}</p>`)
+
+
+    // Kode: Function return value lebih dari satu
+    function nilaiUjian(kkm) {
+        if (kkm > 90) {
+            return 'Nilai ujian anda A'
+        } else if (kkm > 80) {
+            return 'Nilai ujian anda B'
+        } else if (kkm > 70) {
+            return 'Nilai ujian anda C'
+        } else if (kkm > 60) {
+            return 'Nilai ujian anda D'
+        } else {
+            return 'Coba Tahun Depan'
+        }
+    }
+
+    let nilai = prompt('Masukkan nilai ujian Anda:');
+        let nilaiAkhir = parseFloat(nilai);
+        let nilaiBulat = Math.round(nilaiAkhir);
+
+        // Memeriksa tipe data input
+        if (isNaN(nilaiAkhir) || !Number.isFinite(nilaiAkhir)) {
+            console.log('Input tidak valid');
+        } else {
+            const hasilAkhir = nilaiUjian(nilaiBulat);
+            console.log(hasilAkhir);
+        }
+
+    //Menghentikan Eksekusi dengan Return
+    function isContains(array, searchValue) {
+        for (const element of array) {
+            console.info(`iterasi element ke ${element}`)
+            if (element === searchValue) {
+                return true                
+            }
+        }
+        return false
+    }
+
+    const array = [1,10,23,2,2422,10,345,2,312,10,11,2]
+    const search = 2
+    const found = isContains(array, search)
+    console.info(`${found}`)
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+    <!-- Konversi String dan Number
+        Saat membuat aplikasi, kadang kita input dari pengguna selalu dalam bentuk string.
+        Sedangkan kita ingin mengelola datanya dalam bentuk number.
+        Maka sangat disarankan untuk melakukan konversi tipe data.
+
+        Melakukan Konversi String dan Number
+        Function            |   Keterangan
+        parseInt(string)    |   Mengkonversi dari string ke number (bilangan bulat)
+        parseFloat(string)  |   Mengkonversi dari string ke number (bilangan pecahan)
+        Number(string)      |   Mengkonversi dari string ke number (bilangan bulat atau pecahan)
+        number.toString()   |   Mengkonversi dari number ke string
+
+        NaN
+        Bagaimana jika ternyata data string yang kita coba konversi ke number bukanlah data yang valid?
+        Jika data string yang coba kita lakukan konversi bukanlah data yang valid,
+        maka hasil dari konversi tersebut adalahh NaN (Not a Number).
+        NaN adalah number spesial yang menyebutkan bahwa ini bukanlah number.
+        Jika NaN dikonversikan dengan data number lainnya, maka hasilnya akan menjadi NaN lagi.
+
+        isNaN() Function
+        Kadang kita ingin mengecek apakah sebuah number itu NaN atau bukan.
+        Untuk melakukan pengecekan tersebut, kita bisa menggunakan function isNaN(number).
+        Hasil nya berupa data boolean, true jika NaN, false jika bukan
+     -->
+
+<script>
+
+    //Konversi String dan Number
+    document.writeln('Konversi String dan Number')
+    const value1 = '2'//kita anggap ini inputan dari user
+    const value2 = 1
+    const sum = value1 + value2
+    document.writeln(`<p>${sum}</p>`)
+
+    const hiji = '2'
+    const valueA = parseInt (hiji)//setelah dikonversi
+    const valueB = 1
+    const sumAb = valueA + valueB
+    document.writeln(`<p>maka hasilnya ${sumAb}</p>`)
+
+    document.writeln(`<p>${parseInt(1.7)}</p>`)//bilangan pecahannya akan di hiraukan
+    document.writeln(`<p>${parseFloat(1.2)}</p>`)
+    document.writeln(`<p>${Number(1.2)}</p>`)
+
+    //toString
+    let a = 2
+    let b = 2
+    let jumlah = a.toString() + b.toString()
+    document.writeln(`<p>${jumlah}</p>`)
+
+    //NaN
+    document.writeln(`Penggunaan NaN`)
+    //parseInt dan parseFloat akan mentolelir jika kesalahannya ada di belakang
+    document.writeln(`<p>${parseInt('salah')}</p>`) //NaN
+    document.writeln(`<p>${parseInt('4salah')}</p>`) //4
+    document.writeln(`<p>${parseInt('w4salah')}</p>`) //NaN
+    document.writeln(`<p>${parseFloat('1.1text')}</p>`) //1.1
+    document.writeln(`<p>${parseFloat('c1.1text')}</p>`) //NaN
+    //Number() tidak akan mentolelir kesalahan pada data
+    document.writeln(`<p>${Number('34cd')}</p>`)//NaN
+    document.writeln(`<p>${Number('1.2x')}</p>`)//NaN 
+    document.writeln(`<p>${Number('k3')}</p>`)//NaN 
+    document.writeln(`<p>${Number('bukan number')}</p>`)//NaN 
+
+    //Operasi pada NaN
+    const X = Number('salahcoy')//NaN
+    const Y = 50 
+    const jmlh = X + Y //NaN
+    document.writeln(`<p>Number + 50 = ${jmlh}</p>`)
+
+    //isNaN() Function
+    const c = 'hapus'
+    document.writeln(`<p>Apakah \'NaN\' termasuk NaN? ${isNaN(NaN)}</p>`)
+    document.writeln(`<p>Apakah \'100\' termasuk NaN? ${isNaN(100)}</p>`)
+    document.writeln(`<p>Apakah \'hapus\' termasuk NaN? ${isNaN(c)}</p>`)
+    document.writeln(`<p>Apakah \'1.33\' termasuk NaN? ${isNaN(1.33)}</p>`)
+</script>
+
+</body>
+</html>

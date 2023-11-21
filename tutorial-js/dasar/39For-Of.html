@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+<!-- For Of
+    - Jika For In digunakan untuk iterasi property atau index, berbeda dengan For Of,
+    ini digunakan untuk melakukan iterasi terhadap isi value dari iterable object, seperti Array, dll.
+    - for of tidak bisa digunakan untuk melakukan iterasi data object, karena object bukanlah iterable.
+
+    Beberapa contoh objek yang merupakan iterable di JavaScript adalah sebagai berikut:
+    - Array: Array adalah objek iterable yang berisi kumpulan nilai dalam urutan tertentu. Kita dapat mengakses nilai-nilai dalam array menggunakan perulangan atau metode-metode seperti forEach, map, atau reduce.
+    - String: String juga merupakan objek iterable. Kita dapat mengakses setiap karakter dalam string menggunakan perulangan atau metode-metode yang tersedia seperti charAt atau menggunakan operator indeks [].
+    - Map: Map adalah objek iterable yang memetakan pasangan kunci-nilai. Kita dapat mengakses kunci atau nilai dalam Map menggunakan perulangan atau metode-metode seperti forEach.
+    - Set: Set adalah objek iterable yang berisi nilai unik tanpa urutan tertentu. Kita dapat mengakses nilai-nilai dalam Set menggunakan perulangan atau metode-metode seperti forEach.
+-->
+<script>
+    //contoh chat gpt
+    const array = [1, 2, 3, 4, 5];
+
+        for (const element of array) {
+            console.log(element);
+        }
+
+        const string = 'Hello';
+
+        for (const char of string) {
+            console.log(char);
+            document.writeln(`<p>${char}</p>`)
+        }
+
+        const map = new Map();
+        map.set('name', 'John');
+        map.set('age', 30);
+
+        for (const [key, value] of map) {
+            console.log(key, value);
+        }
+
+    //contoh lain
+    const namesMarksman = ['Miya', 'karrie', 'iritel', 'Mellisa', 'Moskov']
+
+    for (const name of namesMarksman) {
+        console.info(`${name}`)
+    }
+</script>
+</body>
+</html>

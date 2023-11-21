@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <!-- 
+    Prototype
+    - Javascript sebelumnya dikenal dengan pemrograman berbasis prototype
+    - Memang agak sedikit membingungkan, dan tidak dipungkiri, banyak sekali yang bingung dengan konsep prototye di JavaScript 
+    - pada chapter ini, kita akan bahas tentang konsep prototype
+
+    Prototype Inheritance
+    - Saat kita membuat object dari constructor function, object tersebut disebut instance, semua property (baik itu value atau method), akan berada didalam instance object nya
+    - Setiap kita membuat sebuah constructor function, maka secara otomatis akan dibuatkan prototype nya, misal ketika kita membuat sebuah sonstructor function Person, maka akan ada Person.prototype
+    - Saat ini kita sedang membuat sebuah object instance, secara otomatis object tersebut adalah turunan dari Constructor.prototype nya
+    - Untuk mengakses prototype milih sebuah instance, kita bisa menggunakan __proto__
+
+    Cara Kerja Prototype Inheritance
+    - Bagaimana bisa property di prototype diakses dari object instance?
+    - Ketika kita mengakses property di object instance, pertama akan di cek apakah d object tersebut terdapat property tersebut atau tidak, jika tidak, maka akan di cek di __proto__ (prototype) yang lebih tinggi, begitu seterusnya, sampai berakhir di Object Prototype 
+     -->
+    <script>
+            function Person(firstName, lastName) {
+                this.firstName = firstName
+                this.lastName = lastName
+                this.sayHallo = function (name) {
+                    console.info(`Hello ${name}, my name is ${this.firstName} ${this.lastName}. Nice to meet you`)
+                }//silahkan tambahkan function sebanyak-banyaknya karena mirip seperti membuat function pada biasanya
+            }
+
+            Person.prototype.sayBye = function (){
+                console.info('good bye')
+            }
+            Person.prototype.run = function (){
+                console.info(`${this.firstName} is running`)
+            }
+
+            const eko = new Person('Firman', 'Hermansyah')
+            eko.sayBye = function () {
+                console.info('Good By')
+            }
+            const budi = new Person('Fyrmuen', 'Expert')
+
+            console.info(eko)
+            console.info(budi)
+
+            eko.sayBye()
+            eko.run()
+            budi.sayBye()
+            budi.run()
+    </script>
+</body>
+</html>

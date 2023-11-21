@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika</title>
+</head>
+<body>
+    <!-- Operator Logika
+    Operator logika adalah operator untuk dua buah data boolean.
+    Hasil dari operator logika adalah boolean lagi.
+    Operator    |   Keterangan
+    &&          |   Dan
+    ||          |   Atau
+    !           |   Kebalikan
+
+    Operator && (and)
+    Nilai 1   |   Operator    |   Nilai 2     |   Hasil 
+    true      |   &&          |   true        |   true  
+    true      |   &&          |   false       |   false 
+    false     |   &&          |   true        |   false 
+    false     |   &&          |   false       |   false 
+
+    Operator || (or)
+    Nilai 1   |   Operator    |   Nilai 2     |   Hasil 
+    true      |   ||          |   true        |   true  
+    true      |   ||          |   false       |   true 
+    false     |   ||          |   true        |   true
+    false     |   ||          |   false       |   false 
+
+    Operator ! (Unary)
+    Operator    |   Nilai   |   Hasil
+    !           |   true    |   false
+    !           |   false   |   true
+     -->
+     <p>Operator and</p>
+     <script>
+        const nilaiUjian = 65
+        const nilaiAbsensi = 65
+        
+        const lulusUjian = nilaiUjian > 75
+        document.writeln(lulusUjian)
+        const lulusAbsensi = nilaiAbsensi > 75
+        document.writeln(lulusAbsensi)
+
+        const lulus = lulusUjian && lulusAbsensi
+        document.writeln(lulus + '</br>')
+
+            const nilaiUjian2 = 90
+            const nilaiAbsensi2 = 90
+            
+            const lulusUjian2 = nilaiUjian2 > 75
+            document.writeln(lulusUjian2)
+            const lulusAbsensi2 = nilaiAbsensi2 > 75
+            document.writeln(lulusAbsensi2)
+    
+            const lulus2 = lulusUjian2 && lulusAbsensi2
+            document.writeln(lulus2 + '</br>')
+
+            const nilaiUjian3 = 50
+            const nilaiAbsensi3 = 90
+            
+            const lulusUjian3 = nilaiUjian3 > 75
+            document.writeln(lulusUjian3)
+            const lulusAbsensi3 = nilaiAbsensi3 > 75
+            document.writeln(lulusAbsensi3)
+    
+            const lulus3 = lulusUjian3 && lulusAbsensi3
+            document.writeln(lulus3 + '</br>')
+            document.writeln('</br>')
+            
+
+        document.writeln('Operator or' + '</br>')
+        const nuIndo = 50
+        const nuMtka = 50
+
+        const doneIndo = nuIndo > 80 //false
+        document.writeln(doneIndo)
+        const doneMtka = nuMtka > 80 //false
+        document.writeln(doneMtka)
+        const doneSKS = doneIndo || doneMtka
+        document.writeln(doneSKS + '</br>') //false
+
+        const nuWeb = 90
+        const nuPai = 90
+        const doneWeb = nuWeb > 75 //true
+        const donePai = nuPai > 75 //true
+        const doneSKS2 = doneWeb || donePai //true
+        document.writeln(doneSKS2 + '</br>')
+
+        const ipa = 90
+        const ips = 60
+        const llsIpa = ipa > 75 //true
+        const llsIps = ips > 75 //false
+        const llsSD = llsIpa || llsIps
+        document.writeln(llsSD + '</br>')
+
+        document.writeln('Operator Unary' + '</br>')
+        const hargaPulpen = 5000
+        const hargaPensil = 2000
+        const hargaMahala = 5000 > 2000 //true
+        document.writeln( ! hargaMahala ) //false
+     </script>
+</body>
+</html>

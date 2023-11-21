@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype di Class</title>
+</head>
+<body>
+    <!-- 
+    Prototype di CLass
+    - Sama seperti pada constructor function, dalam class pun kita bisa menambahkan Prototype
+    - Karena hasil akhirnya adalah sebuah object, jadi menambahkan Prototype di class bisa juga dilakukan di instance object nya
+     -->
+    <script>
+        class Person {
+
+            constructor(name){
+                this.name = name 
+            }
+
+        }
+        const eko = new Person ('Eko')
+        console.info(eko)
+        console.info(eko.name)
+    </script>
+</body>
+</html>

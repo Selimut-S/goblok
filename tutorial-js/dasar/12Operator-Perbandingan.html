@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Perbandingan</title>
+</head>
+<body>
+    <!-- Operasi Perbandingan 
+    Operasi Perbandingan adalah operasi untuk membandingkan dua buah data.
+    Operasi Perbandingan adalah operasi yang menghasilakan nilai boolean (benar atau salah).
+    Jika hasil operasinya adalah benar, maka nilainya adalah true.
+    Jika hasil operasinya adalah salah, maka nilainya adalah false.
+    Operator    |   Keterangan
+    >           |   lebih dari
+    <           |   Kurang dari
+    >=          |   Lebih dari sama dengan 
+    <=          |   Kurang dari sama dengan
+    ==          |   Sama dengan
+    ===         |   Sama dengan dan sama tipe
+    !=          |   Tidak sama dengan
+    !==         |   Tidak sama dengan atau tidak sama tipe
+     -->
+    <script>
+        let dog = 5 == '5' //true
+        document.writeln('<p>' + '5 == 5    ' + dog + '</p>')
+
+        dog = 5 === '5' //false
+        document.writeln('<p>' + '5 === \'5\'   ' + dog + '</p>')
+
+        dog = 5 === 5 //true
+        document.writeln('<p>' + '5 === 5   ' + dog + '</p>')
+
+        dog = 6 < 16 //true
+        document.writeln('<p>' + '6 < 16    ' + dog + '</p>')
+
+        dog = 6 > 16 //false
+        document.writeln('<p>' + '6 > 16  ' + dog + '</p>')
+
+        let cat = 2 != 3 //true
+        document.writeln('<p>' + '2 != 3    ' + cat + '</p>')
+
+        cat = 2 != 2 //false
+        document.writeln('<p>' + '2 != 2    ' + cat + '</p>')
+
+        cat = 3 !== 5 //true
+        document.writeln('<p>' + '3 !== 5 ' + cat + '</p>')
+
+        cat = 3 !== 3 //false
+        document.writeln('<p>' + '3 !== 3 ' + cat + '</p>')
+
+        cat = 3 !== '3' //true
+        document.writeln('<p>' + '3 !== \'3\' ' + cat + '</p>')
+    </script>
+</body>
+</html>

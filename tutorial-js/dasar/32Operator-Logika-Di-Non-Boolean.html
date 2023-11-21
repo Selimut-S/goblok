@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika DI Non Boolean</title>
+</head>
+<body>
+    <!-- Falsy 
+            - Falsy atau kadang ditulis falsey , adalah value yang ketika dalam konteks boolean, di anggap false
+            - Ini adalah salah satu fitur unik dari JavaScript, yang berguna, namun kadang juga sering membingungkan
+            - Jadi di JavaScript, kondisi itu tidak hanya bisa boolean, tapi diluar boolean pun bisa, 
+                namun kita harus tahu beberapa data falsy, atau diangggap false
+            Data yang dianggap Falsy    |   Keterangan
+            false                       |   Boolean false
+            0,-0                        |   Number 0 dan -0 dianggap false
+            " ", ' ', ` `               |   Semua string kosong dianggap false
+            null                        |   null dianggap false
+            undifined                   |   undifined dianggap false
+            NaN                         |   not a Number dianggap false
+    
+            Truthy
+            - Truthy adalah kebalikan dari falsy, diamana data nya dianggap nilai true 
+            - Sederhana sekali sebenarnya untuk mengetahui sebuah data itu adalah Truthy, 
+                yaitu data yang bukan bernilai falsy
+            Data yang dianggap Truthy   |   Keterangan
+            true                        |   Boolean true
+            -n,...,-2,-1,1,2,...,n      |   Number selain 0 dan -0 dianggap true
+            "xxx", 'yyy', `zzz          |   Semua string yang ada isinya dianggap true
+            [], {}                      |   selain null dianggap true
+            difined                     |   difined dianggap true
+            selain NaN                  |   Selain Not a Number dianggap true
+        -->
+
+    <!-- Operator Logika Non Boolean
+        - Operator logika AND (&&) dan OR (||) digunakan untuk data boolean. 
+        - Namun berbeda di javascript, kita bisa menggunakan operator logika AND dan OR untuk dipe data non boolean
+
+        Operator OR (||) di non boolean
+        - Operator OR (||), membaca dari kiri ke kanan.
+        - Operator ini akan mengambil nilai pertama yang truthy.
+        - Jika tidak ada satupun yang bernilai truthy, maka yang terakhir akan diambil.
+    -->
+
+    <!-- Operator logika AND (&&) di Non Boolean 
+        -Operator logika AND (&&), membaca dari kiri ke kanan.
+        -Operator ini akan mengambuil nilai pertama yang falsy. 
+        -Jika tidak ada satupun yang bernilai falsy, maka yang terakhir akan diambil.
+    -->
+    <script>
+        //OR ||
+        console.info(`Hello` || "")
+        console.info("" || [])
+        console.info(`0` || `NOL`)
+        console.info(0 || 'NOL')
+        console.info(null || 'null')
+        console.info(undefined || 'undifined')
+        console.info(0 || false)
+        console.info(0 || false || null || undefined || '' || -0) //contoh data falsy yang diambil data terakhir
+
+        //contoh 
+        let person = {
+            firstName: -0, //false
+            midName: '', //false
+            lastName: 'Couffin' //true
+        }
+
+        let name = person.firstName || person.midName  || person.lastName
+        console.info(name)
+
+
+        //AND &&
+        console.info(`hello man` && ``) //``
+        console.info(`` && []) //``
+        console.info(`0` && `nol`) //nol
+        console.info(0 && `nol`) //0
+        console.info(null && `NULL`) //null
+        console.info(undefined && `UNDEFINED`) //undefined
+        console.info(`undefined` && `null`) //null
+    </script>
+</body>
+</html>

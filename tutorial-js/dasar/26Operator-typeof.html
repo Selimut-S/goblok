@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator typeof</title>
+</head>
+<body>
+<!-- Operator typeof
+    Typeof merupakan operator yang bisa kita gunakan untuk melihat tipe data sebuah value atau variable.
+    Karena JavaScript merupakan dynamic language, jadi kita kadang perlu mengecek type data sebuah value atau variable menggunakan operator typeof.
+    Hasil dari operator typeof adalah string tipe datanya.
+
+    Type        |   Hasil Operator Typeof
+    Undefined   |   'undefined'
+    Null        |   'object'
+    Boolean     |   'boolean'
+    Number      |   'number'
+    BitInt      |   'bigint'
+    String      |   'string'
+    Symbol      |   'symbol'
+    Function    |   'function'
+    Lainnya     |   'object'
+ -->
+
+<script>
+    //cara 1
+    let data
+    if (typeof data === 'number'){
+        alert('Ini type number')
+    } else if (typeof data === 'string'){
+        alert('Ini type string')
+    } else if (typeof data === 'boolean'){
+        alert('Ini type boolean')
+    } else if (typeof data === 'object'){
+        alert('Ini type object')
+    } else if (typeof data === 'undefined'){
+        alert('Ini type undefined')
+    }
+    //cara 2 (rekomendasi pakai cara ini)
+    const data9 = 5
+    const typeData = typeof data9
+    document.writeln(`<p><b>${data9}</b> Merupakan type data <i>${typeData}</i></p>`)
+</script>
+</body>
+</html>

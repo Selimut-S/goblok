@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Class Field</title>
+</head>
+<body>
+    <!-- 
+    Private Class
+    - Secara default, saat kita menambahkan field, maka field tersebut dapat diakses dari manapun
+    - jika kita ingin membuat field yang bersifat private (hanya bisa diakses didalam class), kita bisa menggunakan tanda # sebelum nama field nya
+    - Ini dinamakan private class field, dan hanya bisa diakses dari dalam class saja
+     -->
+    <script>
+        class Counter {
+            // # private class field tidak bisa diakses diluar class
+            #counter = 0 
+
+            increment() {
+                this.#counter++
+            }
+
+            decrement() {
+                this.#counter--
+            }
+
+            get(){
+                return this.#counter
+            }
+        }
+
+        const counter = new Counter()
+        counter.increment()
+        counter.increment()
+        counter.increment()
+        counter.increment()
+        counter.increment()
+        console.info(counter.get())
+        console.info(counter)
+
+        counter.counter = 100 //meskipun dikasih nilai lagi 100, #counter tidak akan berubah karena tidak dapat diakses dari luar class, ini bagus jika kita ingin melindungi sebuah field
+
+    </script>
+</body>
+</html>

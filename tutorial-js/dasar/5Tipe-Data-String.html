@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data String (teks)</title>
+</head>
+<body>
+    <!-- Tipe data string
+        Tipe data string atau text adalah tipe data yang berisikan kumpulan kosong atau lebih karakter.
+        Sebelumnya kita sudah pernah mengguakan string ketika menggunakan progrma hello world.
+        Di JS untuk membuat data dengan tipe string, kita perlu menggunakan "" (petik dua) atau '' (petik satu) sebelum dan setelah isi text nya
+     -->
+     <script>
+        document.writeln('Fyrmuen')
+        document.writeln('</br>')
+        document.writeln("Firman Hermansyah")
+        document.writeln('</br>')
+        /* Menambah String
+        Data string bisa digabung mengguankan opetor + (plus)
+        */
+        document.writeln('Nama:'+'Fyrmuen')
+        document.writeln('</br>')
+        document.writeln('Nama: '+'Firman '+'Hermansyah')
+        /* Escape Sequence
+        JS mendukung escape sequence di string. Escape sequence merupakan karakter khusus,
+        seperti ENTER, TAB, "" (kutip dua), dll. Contoh:
+        \n  =   ENTER
+        \t  =   TAB
+        \'  =   '
+        \"  =   "
+        \\  =   \
+        */
+        document.writeln("<textarea cols='100' rows='10'>")
+            document.write('fyrmuen \nFirman hermansyah\n') 
+            document.write('adssnceiet vrrituc wuer \t\t woiey v u4yrh \n') 
+            document.write('\'Firman Hermansyah\' atau juga bisa dipanggil \"Fyrmuen\"\n')
+            document.write('\\\\ku kira kita kan bersama//\n')
+        document.writeln("</textarea>")
+        /*
+        Write : menampilkan hasil tanpa ganti baris dan tampilan berikutnya akan disambung dalam baris yang sama. 
+        WriteLn : digunakan untuk menampilkan tampilan perbaris, akan ganti baris untuk tampilan berikutnya.
+        */
+     </script>
+</body>
+</html>

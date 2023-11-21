@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break & Continue</title>
+</head>
+<body>
+    <!-- Break & Continue
+        - Pada switch statement, kita sudah mengenal kata kunci break, yaitu unntuk case dalam switch.
+        - Sama dengan pada perulangan, break juga digunakan untuk menghentikan seluruh perulangan. 
+        - Namun berbeda dengan continue, continue digunakan untuk menghentikan perulangan saat ini, lalu melanjutkan ke perulangan selanjutnya.
+    -->
+    <script>
+        //break
+        let foxLoughingCouffin = 1
+
+        while (true) {
+            document.writeln(`<p> Perulangan ke ${foxLoughingCouffin}</p>`)
+            foxLoughingCouffin++ //perulangan akan terus berlanjut dengan ditambah 1
+
+            if (foxLoughingCouffin > 10){
+                break //perulangan akan berhenti ketika sudah mencapai 10 kali
+            }
+        }
+
+        // continue
+        for (let fox = 1; fox <= 100; fox++) {
+            if (fox % 2 === 0) {
+                continue
+            }
+            document.writeln(`<p>Perulangan ganjil ${fox}</p>`)
+        }
+    </script>
+</body>
+</html>

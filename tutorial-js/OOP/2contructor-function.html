@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Conrtuctor Function</title>
+</head>
+<body>
+    <!-- 
+    Membuat construktor function
+    - sebelum ecmascript versi 6, pembuatan class, biasanya menggunakan function. Hal ini dikarenakan sebenarnya javascript bukanlah bahasa pemrograman yang fokus ke OOP
+    - untuk membuat class di javascript lama, kita bisa membuat function
+    - function ini kita sebut dengan constructor function
+
+    Membuat object dari constructor function
+    - Setelah kita membuat class, jika kita ingin membuat object dari class tersebut, kita bisa menggunakan kata kunci new, lalau diikuti dengan nama cunstructor function nya
+     -->
+    <script>
+        // constructer function, harus diawali huruf besar
+        function PersonSipil() {
+
+        }
+        // membuat object dengan object
+        const fyrmuen = {
+            firstName: 'fox',
+            lastName: 'couffin'
+        }
+        const spy = {
+            namaDepan: 'yor',
+            namaBelakang: 'forger'
+        }
+
+        
+        // membuat objek dari constructor function
+        function Person () {
+
+        }//kita anggap ini class nya, walaupun di javascript ini disebut constructor funntion
+        const eko = new Person()//objek eko
+        const budi = new Person()//objek budi
+    </script>
+</body>
+</html>

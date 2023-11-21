@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalessing Operator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Nullish Coalessing Operator
+    Nullist value adalah null dan undefined.
+    Nullist Coalessing Operator (??) adalah operator mirip dengan ternary operator, yang membedakan adalah pada kondisi, 
+    jika bernilai null atau undefined, baru value default nya diambil
+ -->
+<p class="aduh">kie yeh</p>
+<script>
+//menggunakan undefined dan null
+    let parameter
+    let data = parameter
+    if (data === undefined || data === null) {
+        data = 'Nilai Default'
+    }
+    alert(data)
+//menggunakan nullish coalssing operator
+data = parameter ?? 'Nilai default'
+document.writeln(`${data}`)
+
+let baju = 'elger'
+let merk = baju ?? 'Merk Baju Tidak ditemukan' //
+document.writeln(`<p>${merk}</p>`)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Constructor</title>
+</head>
+<body>
+    <h1>aduyh</h1>
+    <!-- 
+    Super Constructor
+    - Class Inheritance sifatnya seperti Prototype INheritance 
+    - Bagaimana dengan constructor inheritance? sebenarnya constractor inheritance hanyalah melakukan eksekusi constructor lain dengan tujuan agar property di constructoe lain bisa ditambahkan ke instance objek ini 
+    - Dalam kasus ini, jika kita ingin mencapai hasil yang sama, kita bisa menggunakan kat akunci super didalam konstructor 
+    - Kata kunci super digunakan untuk memanggil constructor super class 
+    - Jika di child class kita membuat constructor, maka kita wajib memanggil parent constructor, walaupun di parent tidak ada constuctor
+     -->
+    <script>
+        // Super Constructor 1
+        class Employee {
+
+            constructor(name){
+                this.name= name
+            }
+            sayHallo(name) {
+                console.info(`Hi ${name}, my name is employee ${this.name}`)
+            }
+        }
+            
+        class Manager extends Employee {
+            sayHallo(name) {
+                console.info(`Hi ${name}, my name is manager ${this.name}`)
+            }
+        }
+
+        const elis = new Employee('Elis')
+        elis.sayHallo('Firman')
+
+        const gina = new Manager('Gina Rahmawati')
+        gina.sayHallo('Firman')
+
+        console.info(elis)
+        console.info(gina)
+
+        // Super Constructor 2
+        class Employee2 {
+
+            constructor(firstName){
+                this.firstName= firstName
+            }
+            sayHallo(name2) {
+                console.info(`Hi ${name2}, my name2 is employee2 ${this.firstName}`)
+            }
+        }
+            
+        class Manager2 extends Employee2 {
+
+            // kata kunci super tidak boleh digunakan selain didalam constructor
+            constructor (firstName,lastName){
+                super(firstName)//wajib memanggil constructor di parent class nya
+                this.lastName = lastName
+            }
+
+            sayHallo(name2) {
+                console.info(`Hi ${name2}, my name2 is manager2 ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+        const elis2 = new Employee2('Elis')
+        elis2.sayHallo('Firman')
+
+        const gina2 = new Manager2('Gina', 'Rahmawati')
+        gina2.sayHallo('Firman')
+
+        console.info(elis2)
+        console.info(gina2)
+
+    </script>
+</body>
+</html>

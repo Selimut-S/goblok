@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        img {
+        width: 600px;
+    }
+    </style>
+</head>
+<body>
+    <img src="carakerjaarray.jpeg" alt="cara kerja array">
+    <!-- Tipe Data Array
+        Array adalah tipe data yang berisikan kumpulan data.
+        Array di JavaScript memiliki sifat dinamis, artinya datanya bisa bertamnah dengan sendirinya
+        saat kita memasukan data ke dalam Array.
+
+        Cara Kerja Array
+        Setiap data di Arrray akan disimpan dalam posisi berurutan,
+        diaman urutan pertama dimulai dari nomor 0.
+        Setiap kita menambah data ke Array, otomatis data akan di simpan di urutan terakhir.
+        Urutan di Array kita sebut denagn Index.
+
+        Operasi di Array
+        Operasi                 |   Keterangan
+        array.push(value)       |   Menambah data ke Array
+        array.length            |   Untuk mendapatkan panjang Array
+        array[index]            |   Mendapatkan data di posisi index
+        array[index]=value      |   Mengubah data di posisi index
+        delete array[index]     |   Menghapus data diposisi index, namun index tidak bergeser
+
+        Perlu Diingat
+        Data didalam Array tidak ada batasnya harus data apa.
+        Jadi kita bisa memasukan data apapun kedalam Array.
+        Bahkan kita juga bisa memasukan Array ke dalam Array jika kita mau.
+     -->
+<script>
+    //membuat Array
+    let arrayKosong = []
+    let arrayNama = ['Firman' , 'Hermansyah' , 1 ]
+    //menambah data ke Array
+    const names = []
+    names.push('Firman')
+    names.push('hermansyah', '1')
+    names.push('melsa', 'aji', 2)
+
+    console.table(names)
+    // operasi di Array
+    console.info(names[0])
+    console.info(names[1])
+    console.info(names[2])
+
+    names[0] = 'Fyrmuen' //Mengubah data di posisi index
+    names[1] = 'is'
+    names[2] = 'namrif'
+
+    console.table(names)
+
+    delete names[4]
+
+    console.table(names)
+
+    names.push('Swiss van java')
+
+    console.table(names)
+
+    names[4] = 'Fitri'
+    names.push(['Martabak', 'Roti Bakar', 'Dawegan']) //menambahkan Array Kedalam Array
+    names.push('Makanan', ['donat', 'Roti', ['minuman', 'jack daniel'], 'tahu']) 
+
+    console.table(names)
+</script>
+
+</body>
+</html>

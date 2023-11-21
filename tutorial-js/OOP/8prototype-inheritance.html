@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    <!-- 
+    Prototype Inheritance
+    - Sekarang kita sudah tahu, bahwa prototype selalu memiliki parent, artinya dia adalah turunan, parent tertinggi adalah Object Prototype 
+    - Pertanyaannya bagaimana jika kita ingin melakukan Inheritance ke Prototype lain?
+    - Hal ini juga bisa dilakukan, namun agak sedikit tricky, karena hal ini, sebenarnya untuk JavaScript modern, TIDAK DIREKOMENDASIKAN lagi praktek OOP menggunaka Prototype, karena di ES6 sudah dikenalkan kata kunci class yang akan nanti dibahas di chapter tersendiri.
+
+     -->
+    <script>
+        //Prototype Inheritance Salah
+        function Employee (name) {
+            this.name = name
+        }
+        function Manager(name) {
+            this.name = name
+        }
+
+        Manager.prototype = Employee.prototype
+        Manager.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is Manager ${this.name}`)
+        }
+        Employee.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is Employee ${this.name}`)
+        }
+        
+        const employee = new Employee('budi')
+        employee.sayHello('joko')
+        const manager = new Manager('eko')
+        manager.sayHello('asep')
+        
+        
+        //Prototype Inheritance Benar, walaupun ini benar namun tidak direkomendasikan
+        function Employee2(name2) {
+            this.name2 = name2
+        }
+        function Manager2(name2) {
+            this.name2 = name2
+        }
+        
+        Manager2.prototype = Object.create(Employee2.prototype)
+        
+        Manager2.prototype.sayHello = function (name2) {
+            console.info(`Hello ${name2}, my name2 is Manager2 ${this.name2}`)
+        }
+        Employee2.prototype.sayHello = function (name2) {
+            console.info(`Hello ${name2}, my name2 is Employee2 ${this.name2}`)
+        }
+        
+        const employee2 = new Employee2('budi')
+        employee2.sayHello('joko')
+        const manager2 = new Manager2('eko')
+        manager2.sayHello('asep')
+
+        console.info(employee2)
+        console.info(manager2)
+        </script>
+</body>
+</html>

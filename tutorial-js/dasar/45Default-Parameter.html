@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+<body>
+    <!-- Default Parameter
+        - Sekarang kita sudah tahu bahwa parameter itu optional, artinya kita bisa tidak memberi value terhadap parameter
+        - Parameter juga bisa kita beri default value, artinya jika ketika kita tidak mengirim data ke parameter 
+        atau kit amengirim data undefined, maka secara otomatis parameter akan diisi oleh default value        
+    -->
+    <script>
+        function heroMLBB(hero, role = '\'tidak tahu\'') {
+            console.info(hero)
+            console.info(role)
+        }
+
+        heroMLBB()
+        heroMLBB('Miya')
+        heroMLBB('Miya', 'Marksman')
+        heroMLBB('Miya', undefined)
+        heroMLBB('Miya', null)
+    </script>
+</body>
+</html>

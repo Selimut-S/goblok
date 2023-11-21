@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Number</title>
+</head>
+<body style="background-color: rgb(82, 75, 81); color: aliceblue;">
+    <!-- 
+        JavaScript hanya mendukung satu number, dimana tipe data number di JavaScript hanya berupa bilangan bulat atau bilangan desimal.
+        Tipe seperti di bahasa pemrograman lain yang biasanya membedakan type data number bilangan bulat dan bilangan desimal, di JavaScript semuanya disatukan.
+     -->
+     <!-- 
+        jika ingin mengetikan number, kita hanya perlu mengetikannya saja, tidak perlu menggunakan "".
+        jika ingin menggunakan desimal maka gunakan format luar negeri yaitu "." (titik).
+     -->
+    <script>
+        document.writeln(600);
+        document.writeln("</br>");
+        document.writeln(3.14);
+
+        /* 
+    Number Notation
+        Didalam JavaScript mendukug number notation, defaultnya ada basis 10, JavaScript juga mendukung Binary, Hexadecimal dan Octal.
+        Untuk membuat bilangan Binary kita harus mengawalinya dengan "0b"
+        Untuk membuat bilangan Hexadecimal kita harus mengawalinya dengan "0x"
+        Untuk membuat bilangan Octal kita harus mengawalinya dengan "0o"
+        */
+        /* Menulis Binary: 0b
+        Sistem bilangan biner atau sistem bilangan basis dua adalah
+        sebuah sistem penulisan angka dengan menggunakan dua simbol yaitu 0 dan 1
+        */
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("Jika kita menulis angka Binary nya 0b100010010100 maka hasilnya adalah");
+        document.writeln( 0b100010010100 );
+        document.writeln("</br>");
+        document.writeln("Jika kita menulis angka Binary nya 0b10011 maka hasilnya adalah");
+        document.writeln( 0b10011 );
+        /* Menulis Hexadecimal: 0x
+        Bilangan hexadesimal (basis 16). 
+        Hexa berarti 6 dan Desimal berarti 10 adalah jenis sistem bilangan yang terdiri dari 16 simbol 
+        yaitu: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A(10), B(11), C(12), D(13), E(14), dan F(15).
+        */
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("Jika kita menulis angka Hexadecimal nya 0x12AB maka hasilnya adalah");
+        document.writeln( 0x12AB );
+        document.writeln("</br>");
+        document.writeln("Jika kita menulis angka Hexadecimal nya 0xDE maka hasilnya adalah");
+        document.writeln( 0xDE );
+        /* Menulis Octal: 0o
+        Sistem Bilangan Oktal adalah sistem bilangan yang menggunakan basis 8 (octal), 
+        dan menggunakan 8 macam simbol bilangan berbentuk digit angka yaitu 0,1,2,3,4,5,6,7
+        */
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("Jika kita menulis angka Octal nya 0o01 maka hasilnya adalah");
+        document.writeln( 0o01 );
+        document.writeln("</br>");
+        document.writeln("Jika kita menulis angka Octal nya 0o236 maka hasilnya adalah");
+        document.writeln( 0o236 );
+    </script>
+</body>
+</html>

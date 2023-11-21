@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter</title>
+</head>
+<body>
+    <!-- Optional Parameter
+    - Secara default, parameter di function itu optional
+    - Artinya kita tidak wajib mengisi value nya ketika memanggil function
+    - Jika tidak ada value yang kita kirim ke parameter ketika memanggil function, maka secara otomtis parameter tersebut bernilai undefined
+    - Walaupun terlihat sangat menguntungkan bagi kita karena tidak terjadi error, tapi ini bahaya dalam suatu kasus
+    -->
+    <script>
+        //kode optional parameter
+        function typeHeroRole(expLAne, midLane, bottomLane) {
+            console.info(expLAne)
+            console.info(midLane)
+            console.info(bottomLane)
+        }
+
+        typeHeroRole(`Hilda`)
+    </script>
+</body>
+</html>
