@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Rest Parameter
-    - Rest Parameter adalah fiturdimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter,
+    - Rest Parameter adalah fitur dimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter,
     dan secara otomatis akan dikonversi menjadi array.
     - Untuk membuat rest parameter, ada ketentuannya.
     - Rest parameter hanya boleh ada satu di function, tidak boleh lebih dari satu.
@@ -23,11 +23,17 @@
     - Tapi untungnya kita juga bisa mengirim Array ke Rest Parameter
     - Kita bisa gunakan ... (titik tiga kali) diikuti dengan array nya ketika memanggil function 
     - fitur ini dinamakan spread syntax
+
+    Arguments Object (fitur lama)
+    - Sebelum ada fitur rest parameter, di JavaScript sudah ada fitur yang bernama arguments object 
+    - ini adalah fitur dimana kita bisa mengambil semua parameter dalam bentuk array dengan menggunakan object bernama arguments
+    - arguments secara otomatis bisa digunakan di function 
+    - Namun perlu diingat, bahwa untuk JavaScript saat ini, lebih baik disarankan menggunakan rest parameter dibanding arguments object
     -->
     <script>
         //function rest parameter
         function sum(melsa, ...data) {
-            let total = 0
+            let total = 4
             for (const item of data) {
                 total += item
             }
@@ -37,9 +43,21 @@
         sum('cantik', 2, 3, 4, 5, 8, 9, 9, 9)
         sum('sholehah', 2, 13, 4, 1, 9, 9)
         sum('putih', 2, 3, 4, 5, 8)
-        sum('syar\'i', 'baik', ' bikin nyaman', 4, 5, 8, 9, 9, 9)
-        sum('sholehah', 2, 'freandly', 4, 1, 9, 9)
-        sum('cantik', 2, 3, 4, 'wangi', 8, 9, 80)
+
+        //spread syntax
+        const values = [10, 10, 10, 10, 10]
+        sum('test', ...values)
+
+        //Arguments Object
+        function oldSum() {
+            let absolute = 0
+            for (const angka of arguments) {
+                absolute += angka
+            }
+            document.writeln(`Total is ${absolute}`)
+        }
+
+        oldSum(1,2,3,4,2,1,3,4,3)
         
     </script>
 </body>
